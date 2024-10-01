@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Words" %>
+
+<div class="container">
+  <h1>Dicionário</h1>
+  <div id="words" class="diktionary">
+    <ul id="minhaLista">
+    <% @words.each do |word| %>
+      <li><strong><%= word.term %>:</strong> <%= word.definition %></li>
+    <% end %>
+    </ul>
+  </div>
+</div>
